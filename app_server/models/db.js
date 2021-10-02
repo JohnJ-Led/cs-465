@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const host = process.env.DB_HOST || '127.0.0.1'
+const host = process.env.DB_HOST || '127.0.0.1:27017'
 const dbURI = `mongodb://${host}/travlr`;
 const readLine = require('readline');
 
 //avoid 'current Server Discorvery and MOnitoring engine is deprecated'
-mongoose.set('useUnifiedTopplogy', true);
+//mongoose.set('useUnifiedTopplogy', true);
 
 const connect = () => {
     setTimeout(() => mongoose.connect(dbURI, {
