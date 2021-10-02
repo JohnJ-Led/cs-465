@@ -18,9 +18,9 @@
     "nodemon": "^2.0.12"
   },
   "seedgoose": {
-    "modelBaseDirectory": "app_server/models",
+    "modelBaseDirectory": "app_api/models",
     "models": "travlr.js",
     "data": "data",
-    "db": "mongodb://localhost:27017/travlr"
+    "db": "mongodb://localhost/travlr"
   }
 }
