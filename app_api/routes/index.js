@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const controller = require('../contollers/trips');
+const authConroller = require('../contollers/authentication');
+
 /* GET home page. */
 
 router
@@ -12,6 +14,14 @@ router
 .route('/trips/:tripCode')
 .get(controller.tripsFindByCode)
 .put(controller.tripsUpdateTrip);
+
+router
+.route('/login')
+.post(authConroller.login);
+
+router
+.route('/register')
+.post(authConroller.register);
 
 module.exports = router;
 

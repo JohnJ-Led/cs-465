@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { trips } from '../data/trips';
 import { TripDataService } from '../services/trip-data.service';
 import { Trip } from '../models/trip';
 
@@ -12,7 +11,7 @@ import { Trip } from '../models/trip';
 })
 export class TripListingComponent implements OnInit {
 
-  //trips: Array<any> = trips;
+  
   trips!: Trip[]; //added ! to not invoke strict delecerations.
 
   message!: string;
