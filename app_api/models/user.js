@@ -18,7 +18,7 @@ userSchema.methods.setPassword = function (password) {
 userSchema.methods.validPassword = function (password) {
     var hash = crypto.pbkdf2Sync(password,
         this.salt, 1000, 64, 'sha512').toString('hex');
-    return this.hash === hash;
+        return this.hash === hash;
 };
 
 userSchema.methods.generateJwt = function () {
@@ -32,4 +32,4 @@ userSchema.methods.generateJwt = function () {
     }, process.env.JWT_SECRET); // DO NOT KEEP YOUR SECRET IN THE CODE!
 };
 
-mongoose.model('users', userSchema);
+mongoose.model('users', userSchema)

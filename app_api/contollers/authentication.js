@@ -31,7 +31,7 @@ const login = (req, res) => {
             .status(400)
             .json({ "message": "All fields required" });
     }
-    passport.authenticate('local', (err, user, info) => {
+    authenticate('local', (err, user, info) => {
         if (err) {
             return res
                 .status(404)
