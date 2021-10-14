@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-//const authController = require('../contollers/authentication');
+const authController = require('../contollers/authentication');
 const controller = require('../contollers/trips');
 
 /* GET home page. */
-/*router
+/*outer
 .route('/login')
 .post(authController.login);
 
